@@ -1,1 +1,1 @@
-Agora vai hein
+## Repositório destinado ao estudo de Exercícios Js
