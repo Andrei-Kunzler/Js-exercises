@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>script In Body</title>
+</head>
+<body>
+    <h1>Script no Body</h1>
+    <p id = "Demo"> texto original</p>
+    <button type="button" onclick="myFun()">clique aqui</button>
+    
+    <script>
+        function myFun(){
+            document.getElementById('Demo').innerHTML = "Texto2"
+        }
+    </script>
+    
+</body>
+</html>
