@@ -21,7 +21,7 @@ console.log('ordenar numbers >>>',points.sort(function(a,b){return a - b}))
 /*
     use o mesmo caminho para organizar um array de forma decrescente.
 */
-console.log('ordenar numbers reverse >>>',points.sort((a,b)=>{return b-a}))
+console.log('ordenar numbers reverse >>>',points.sort((a,b)=>{return b - a}))
 
 /*
     A FUNÇÂO DE COMPARAÇÂO
@@ -43,3 +43,36 @@ console.log('ordenar numbers reverse >>>',points.sort((a,b)=>{return b-a}))
     A função calcula 40 - 100 (a - b) e, como o resultado é negativo (-60), a função de classificação classificará 40 como um valor menor que 100.
     Você pode usar este snippet de código para experimentar a classificação numérica e alfabética: 
 */
+
+/*
+    O Método Fisher Yates
+    O exemplo acima, array.sort(), não é preciso, irá favorecer alguns números em detrimento de outros.
+    O método correto mais popular, é chamado de shuffle Fisher Yates, e foi introduzido na ciência de dados já em 1938!
+    Em JavaScript, o método pode ser traduzido para isso:
+
+    ESTUDAR MAIS>>> NÂO DEU CERTO QUANDO TENTEI
+*/
+
+
+/*
+Sorting Object Arrays Number element
+*/
+const cars = [
+    {type:"Volvo", year:2016},
+    {type:"Saab", year:2001},
+    {type:"BMW", year:2010}
+];
+console.log('car sort Year (NUMBER)',cars.sort(function(a,b){ return a.year - b.year}))
+
+/*
+Sorting Object Arrays String element
+*/
+console.log( 'car sort type (STRING)',
+    cars.sort(function(a, b){
+        let x = a.type.toLowerCase();
+        let y = b.type.toLowerCase();
+        if (x < y) {return -1;}
+        if (x > y) {return 1;}
+        return 0;
+    })
+)
